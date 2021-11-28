@@ -4,7 +4,7 @@
   "description": "BMI Calcuator with NodeJS and ExpressJS",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "keywords": [
     "nodejs",
@@ -16,8 +16,16 @@
   "author": "Nihad Keric",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^3.3.7",
     "ejs": "^2.5.7",
-    "express": "^4.15.4"
+    "express": "^4.17.1",
+    "mkdirp": "^1.0.4"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "jest-puppeteer": "^6.0.2",
+    "puppeteer": "^12.0.0",
+    "supertest": "^6.1.6"
   }
 }

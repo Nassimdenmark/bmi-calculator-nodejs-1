@@ -1,16 +1,17 @@
 <% include ../partials/header %>
 
 <div class="jumbotron">
-    <h1>BMI - Calculator</h1>
-    <p>With this tool you can easily determine your BMI.</p>
+    <h1>BMI & Waist-to-Hip Calculator</h1>
+    <p>With these tool you can easily determine your body health.</p>
 </div>
 
 <form method="GET" class="form-horizontal" action="/result">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">Please enter your details!</h3>
+            <h3 class="panel-title">BMI calculator</h3>
         </div>
         <div class="panel-body">
+            
             <div class="form-group">
                 <label for="height" class="col-sm-2 control-label">
                     You Height (cm)
@@ -20,7 +21,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="height" class="col-sm-2 control-label">
+                <label for="weight" class="col-sm-2 control-label">
                     You Weight (kg)
                 </label>
                 <div class="col-sm-10">
@@ -29,7 +30,46 @@
             </div>
         </div>
         <div class="panel-footer">
-            <input type="submit" class="btn btn-primary" value="Send!" />
+            <input id="btn_bmi_submit" type="submit" class="btn btn-primary" value="Send!" />
+        </div>
+    </div>
+</form>
+
+<form method="GET" class="form-horizontal" action="/result">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Waist-to-Hip calculator calculator</h3>
+        </div>
+       
+        <div class="panel-body">
+            <div class="form-group">
+                <div style="width: 50%; margin: 0 auto;">
+                    <input type="radio" id="male" name="gender" value="male"checked>
+                    <label for="male" style="margin-right: 20px;">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="waist" class="col-sm-2 control-label">
+                   Waist (cm)
+                </label>
+                <div class="col-sm-10">
+                    <input name="waist" type="number" class="form-control" id="waist_cm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="hip" class="col-sm-2 control-label">
+                    Hip (cm)
+                </label>
+                <div class="col-sm-10">
+                    <input name="hip" type="number" class="form-control" id="hip_cm" />
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-footer">
+            <input id="btn_whr_submit" type="submit" class="btn btn-primary" value="Send!" />
         </div>
     </div>
 </form>

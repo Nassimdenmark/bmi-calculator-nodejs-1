@@ -1,10 +1,29 @@
 <% include ../partials/header %>
 
 <div class="alert alert-success">
-    <strong>Note:</strong>
-    Your body mass index is: 
-    <strong><%= Math.round(bmi * 100) / 100 %></strong>
-</div>
+    <% 
+        if(type == "bmi"){%>
+            <strong>BMI Calculator</strong><br><br>
+            <strong>Note:</strong>
+            Your body mass index is:
+            <div id="bmi_index" style="font-weight: bold"><%= Math.round(calculation * 100) / 100 %></div></br>
+            Your health status is:
+            <div id="health_status" style="font-weight: bold"><%= Math.round(calculation * 100) / 100 !== 0 ? healthWeight : "Unable to calculate" %></div>
+        <%}%>
+    %>
 
+    <% 
+        if(type == "whr"){%>
+            <strong>WHR Calculator</strong><br><br>
+            <strong>Note:</strong><br>
+            Your body waist-to-hip ratio is:
+            <div id="whr_index" style="font-weight: bold"><%= Math.round(calculation * 100) / 100 %></div></br>
+            Your health status is:
+            <div id="whr_health_index" style="font-weight: bold"><%= healthWeight %></div>
+        
+        <%}%>
+    %>
+   
+</div>
 
 <% include ../partials/footer %>
